@@ -16,15 +16,28 @@ describe('the enhancer', () => {
     });
 
     describe('the enhancement success function', () => {
-        it('increase items enhancement by one not to exceed 20', () => {
+        it('increase items enhancement by one', () => {
+
+        })
+
+        it('should not exceed 20', () => {
 
         })
     })
 
     describe('enhancement fail function', () => {
-        it('will decrease durability by 5 when < 15, by 10 when >15, and will decrease enhancement level by 1 when > 16', () => {
-            
+        it('will decrease durability by 5 when less than 15', () => {
+
         })
+
+        it('will decrease durability by 10 when greater than 15', () => {
+
+        })
+
+        it('will decrease enhancement level by 1 when greater than 16', () => {
+
+        })
+
     })
 });
 
