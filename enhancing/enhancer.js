@@ -15,7 +15,7 @@ function succeed(item) {
 }
 
 function fail(item) {
-  if (item.enhancement >= 15 && item.enhancement > 16) {
+  if (item.enhancement > 16) {
     return {
       ...item,
       enhancement: item.enhancement - 1,
