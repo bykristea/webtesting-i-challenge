@@ -5,11 +5,12 @@ describe('the enhancer', () => {
     describe('the repair function', () => {
         it('should restore the durability to 100', () => {
             //arrange-> mock data
-            const longsword = {};
-            const bow = {};
+            const item = {x};
+
+            
 
             //act -> pass it into the function
-            const result = enhancer.repair(longsword);
+            const result = enhancer.repair(x);
 
             //assert -> 
         });

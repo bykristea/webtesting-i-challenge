@@ -2,19 +2,44 @@ module.exports = {
   succeed,
   fail,
   repair,
-  get,
+  get
 };
 
 function succeed(item) {
-  return { ...item };
+  const enhancement = item.enhancement;
+  if (item.enhancement === 20) {
+    return { ...item, enhancement: enhancement };
+  } else {
+    return { ...item, enhancement: enhancement + 1 };
+  }
 }
 
 function fail(item) {
-  return { ...item };
+  if (item.enhancement >= 15 && item.enhancement > 16) {
+    return {
+      ...item,
+      enhancement: item.enhancement - 1,
+      durability: item.durability - 10,
+    };
+  } else if (item.enhancement >= 15) {
+    return {
+      ...item,
+      durability: item.durability - 10,
+    };
+  } else {
+    return {
+      ...item,
+      durability: item.durability - 5,
+    };
+  }
 }
 
 function repair(item) {
-  return { ...item };
+  if (item.durability !== 100) {
+    return { ...item, durability: 100 };
+  } else {
+    null;
+  }
 }
 
 function get(item) {
