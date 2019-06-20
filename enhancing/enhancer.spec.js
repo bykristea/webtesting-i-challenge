@@ -5,12 +5,16 @@ describe('the enhancer', () => {
     describe('the repair function', () => {
         it('should restore the durability to 100', () => {
             //arrange-> mock data
-            const item = {x};
+            const item = {
+                name:'longbow',
+                enhancement: 2,
+                durability: 42
+            };
 
             
 
             //act -> pass it into the function
-            const result = enhancer.repair(x);
+            expect(enhancer.repair(item).durability).toEqual(100);
 
             //assert -> 
         });
