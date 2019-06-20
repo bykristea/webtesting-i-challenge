@@ -22,11 +22,17 @@ describe('the enhancer', () => {
 
     describe('the enhancement success function', () => {
         it('increase items enhancement by one', () => {
-
+            const item ={
+                enhancement: 15
+            };
+            expect(enhancer.succeed(item).enhancement).toBe(16)
         })
 
         it('should not exceed 20', () => {
-
+            const item = {
+                enhancement: 20
+            };
+            expect(enhancer.succeed(item).enhancement).toBe(20)
         })
     })
 
