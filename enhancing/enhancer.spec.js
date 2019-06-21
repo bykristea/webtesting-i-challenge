@@ -14,6 +14,7 @@ describe('the enhancer', () => {
             
 
             //act -> pass it into the function
+            //toEqual will compare objects or arrays
             expect(enhancer.repair(item).durability).toEqual(100);
 
             //assert -> 
@@ -68,3 +69,12 @@ describe('the enhancer', () => {
 //Arrange
 //Act
 //Assert
+
+// matchers in Jest
+/* 
+-toBe
+-toEqual
+- toBeLessThan/GreaterThan/OrEqual
+- 
+
+*/
